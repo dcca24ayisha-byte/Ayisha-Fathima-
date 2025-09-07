@@ -1,0 +1,13 @@
+// Typing effect for name
+const typedName = document.getElementById("typed-name");
+const nameText = "Ayisha Fathima";
+let index = 0;
+
+function typeEffect() {
+  if (index < nameText.length) {
+    typedName.innerHTML += nameText.charAt(index);
+    index++;
+    setTimeout(typeEffect, 150);
+  }
+}
+typeEffect();
